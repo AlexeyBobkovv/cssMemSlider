@@ -1,0 +1,20 @@
+.slider {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  background-color: #696969;
+
+  padding: 2%;
+}
+
+.slider__top-block {
+  height: 70%;
+}
+
+.slider__bottom-block {
+  height: 20%;
+}
