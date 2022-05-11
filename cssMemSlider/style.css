@@ -113,54 +113,66 @@
 	justify-content: flex-end;
 }
 
-.slider label {
+label {
+	width: 10rem;
+	height: 6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 20px;
+
 	cursor: pointer;
-	display: inline-block;
-	height: 14px;
-	margin: 25px 12px 0 16px;
+}
+
+.border {
 	position: relative;
-	width: 14px;
+
+cursor: pointer;
+display: inline-block;
+width: 30px;
+height: 30px;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-o-border-radius: 50%;
+border-radius: 50%;
+border: 2px solid rgb(43, 158, 178);
+}
+
+.inner {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	content: " ";
+	display: block;
+	background: rgb(43, 158, 178);
+
+	left: -1px;
+	top: -1px;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
 	border-radius: 50%;
-	background: rgb(43, 158, 178);
 }
 
-.slider label:hover {
+label:hover .inner {
 	background: #ddd;
 }
 
-.slider label:after, .slider label:hover:after {
+label:hover .border {
 	border-color: #ddd;
 }
 
-.slider label:active {
+label:active .inner {
 	background: rgb(7, 75, 75);
 }
 
-.slider label:active, .slider label:active:after {
+label:active .border {
 	border-color: rgb(7, 75, 75);
 }
 
-#slide1:checked ~ .bottom-block .bottom-block__navigation label:nth-of-type(1),
-#slide2:checked ~ .bottom-block .bottom-block__navigation label:nth-of-type(2),
-#slide3:checked ~ .bottom-block .bottom-block__navigation label:nth-of-type(3),
-#slide4:checked ~ .bottom-block .bottom-block__navigation label:nth-of-type(4) {
+#slide1:checked ~ .bottom-block .bottom-block__navigation label:nth-of-type(1) .border .inner,
+#slide2:checked ~ .bottom-block .bottom-block__navigation label:nth-of-type(2) .border .inner,
+#slide3:checked ~ .bottom-block .bottom-block__navigation label:nth-of-type(3) .border .inner,
+#slide4:checked ~ .bottom-block .bottom-block__navigation label:nth-of-type(4) .border .inner {
 	background: transparent;
-}
-
-.slider label:after {
-	border: 2px solid rgb(43, 158, 178);
-	content: " ";
-	display: block;
-	height: 12px;
-	left: -1px;
-	position: absolute;
-	top: -1px;
-	width: 12px;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-o-border-radius: 50%;
-	border-radius: 50%;
 }
